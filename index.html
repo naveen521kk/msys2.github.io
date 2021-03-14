@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -8,12 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Software Distribution and Building Platform for Windows">
+      
+      
+      
       
         <link rel="canonical" href="https://www.msys2.org/">
       
-      
       <link rel="shortcut icon" href="favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -21,20 +22,22 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.63b94e9e.min.css">
-      
-        <link rel="stylesheet" href="assets/stylesheets/palette.7f672a1f.min.css">
-      
+      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
       
         
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
         
-        <meta name="theme-color" content="#3f51b5">
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -47,13 +50,46 @@
       
     
     
+   
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MSYS2" />
+<meta property="og:description" content="Software Distribution and Building Platform for Windows" />
+
+<meta property="og:url" content="https://www.msys2.org/" />
+<meta property="og:image" content="https://www.msys2.org/logo.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="250" />
+<script type="application/ld+json">
+  {
+    "image": "https://www.msys2.org/logo.png",
+    "@type": "WebSite",
+    "headline": "MSYS2",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.msys2.org/logo.png"
+      }
+    },
+    "url": "https://www.msys2.org",
+    "description": "Software Distribution and Building Platform for Windows",
+    "name": "MSYS2",
+    "@context": "https://schema.org"
+  }
+</script>
+
   </head>
   
   
     
     
     
+    
+    
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -71,7 +107,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://www.msys2.org" title="MSYS2" class="md-header-nav__button md-logo" aria-label="MSYS2">
       
@@ -82,18 +120,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             MSYS2
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Getting Started
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -104,7 +144,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -145,8 +185,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -154,10 +192,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://www.msys2.org" title="MSYS2" class="md-nav__button md-logo" aria-label="MSYS2">
       
@@ -187,33 +231,31 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active">
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Getting Started
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="." title="Getting Started" class="md-nav__link md-nav__link--active">
-      Getting Started
-    </a>
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Getting Started
+      </a>
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -221,6 +263,13 @@
         <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsors" class="md-nav__link">
+    Sponsors
   </a>
   
 </li>
@@ -257,6 +306,13 @@
           <li class="md-nav__item">
   <a href="#ray-donnelly-mingwandroid" class="md-nav__link">
     Ray Donnelly (@mingwandroid)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#christoph-reiter-lazka" class="md-nav__link">
+    Christoph Reiter (@lazka)
   </a>
   
 </li>
@@ -269,422 +325,456 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="news/" title="News" class="md-nav__link">
-      News
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="news/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://packages.msys2.org" class="md-nav__link">
+        Package Index
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      
+      
+      
+
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-3">
-      Documentation
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Documentation" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
         Documentation
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/what-is-msys2/" class="md-nav__link">
+        What is MSYS2?
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/ci/" class="md-nav__link">
+        Using MSYS2 in CI
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="docs/what-is-msys2/" title="What is MSYS2?" class="md-nav__link">
-      What is MSYS2?
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/who-is-using-msys2/" class="md-nav__link">
+        Who Is Using MSYS2?
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/terminals/" class="md-nav__link">
+        Terminals
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/package-management/" class="md-nav__link">
+        Package Management
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="docs/ci/" title="Using MSYS2 in CI" class="md-nav__link">
-      Using MSYS2 in CI
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/filesystem-paths/" class="md-nav__link">
+        Filesystem Paths
+      </a>
+    </li>
+  
+
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="docs/who-is-using-msys2/" title="Who Is Using MSYS2?" class="md-nav__link">
-      Who Is Using MSYS2?
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="docs/terminals/" title="Terminals" class="md-nav__link">
-      Terminals
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="docs/package-management/" title="Package Management" class="md-nav__link">
-      Package Management
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Development
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Development" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
         Development
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dev/mirrors/" class="md-nav__link">
+        Creating a Mirror
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dev/keyring/" class="md-nav__link">
+        MSYS2 Keyring
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="dev/mirrors/" title="Creating a Mirror" class="md-nav__link">
-      Creating a Mirror
-    </a>
-  </li>
-
-        
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="dev/keyring/" title="MSYS2 Keyring" class="md-nav__link">
-      MSYS2 Keyring
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Old Wiki
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Old Wiki" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Old Wiki
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+      
+      <label class="md-nav__link" for="nav-6">
+        Other Topics
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Other Topics" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Other Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Home/" class="md-nav__link">
+        Welcome to the MSYS2 wiki
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Contributing-to-MSYS2/" class="md-nav__link">
+        Contributing to MSYS2
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="wiki/Home/" title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Creating-Packages/" class="md-nav__link">
+        Creating Packages
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Devtopics/" class="md-nav__link">
+        TODO LIST
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Distributing/" class="md-nav__link">
+        Distributing
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="wiki/Contributing-to-MSYS2/" title="Contributing to MSYS2" class="md-nav__link">
-      Contributing to MSYS2
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/FAQ/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/GDB-qtcreator/" class="md-nav__link">
+        Qt Creator
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/History/" class="md-nav__link">
+        MSYS2 History
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="wiki/Creating-Packages/" title="Creating Packages" class="md-nav__link">
-      Creating Packages
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
+        How does MSYS2 differ from Cygwin?
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Launchers/" class="md-nav__link">
+        Lauchers
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/MSYS2-installation/" class="md-nav__link">
+        MSYS2-Installation
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="wiki/Devtopics/" title="Devtopics" class="md-nav__link">
-      Devtopics
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/MSYS2-introduction/" class="md-nav__link">
+        MSYS2-Introduction
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/MSYS2-reinstallation/" class="md-nav__link">
+        Re-installing MSYS2
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Packages/" class="md-nav__link">
+        Packages List
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="wiki/Distributing/" title="Distributing" class="md-nav__link">
-      Distributing
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Porting/" class="md-nav__link">
+        Porting
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Setting-up-SSHd/" class="md-nav__link">
+        Setting up SSHd
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Signing-packages/" class="md-nav__link">
+        Signing Packages
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="wiki/FAQ/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Sudo/" class="md-nav__link">
+        Do you need Sudo?
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wiki/Terminals/" class="md-nav__link">
+        Terminals
+      </a>
+    </li>
+  
+
           
-
-
-  <li class="md-nav__item">
-    <a href="wiki/GDB-qtcreator/" title="GDB qtcreator" class="md-nav__link">
-      GDB qtcreator
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/History/" title="History" class="md-nav__link">
-      History
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/How-does-MSYS2-differ-from-Cygwin/" title="How does MSYS2 differ from Cygwin" class="md-nav__link">
-      How does MSYS2 differ from Cygwin
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Launchers/" title="Launchers" class="md-nav__link">
-      Launchers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/MSYS2-installation/" title="MSYS2 installation" class="md-nav__link">
-      MSYS2 installation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/MSYS2-introduction/" title="MSYS2 introduction" class="md-nav__link">
-      MSYS2 introduction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/MSYS2-reinstallation/" title="MSYS2 reinstallation" class="md-nav__link">
-      MSYS2 reinstallation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Packages/" title="Packages" class="md-nav__link">
-      Packages
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Porting/" title="Porting" class="md-nav__link">
-      Porting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Setting-up-SSHd/" title="Setting up SSHd" class="md-nav__link">
-      Setting up SSHd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Signing-packages/" title="Signing packages" class="md-nav__link">
-      Signing packages
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Sudo/" title="Sudo" class="md-nav__link">
-      Sudo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="wiki/Terminals/" title="Terminals" class="md-nav__link">
-      Terminals
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -694,7 +784,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -703,9 +794,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -713,6 +802,13 @@
         <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sponsors" class="md-nav__link">
+    Sponsors
   </a>
   
 </li>
@@ -749,6 +845,13 @@
           <li class="md-nav__item">
   <a href="#ray-donnelly-mingwandroid" class="md-nav__link">
     Ray Donnelly (@mingwandroid)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#christoph-reiter-lazka" class="md-nav__link">
+    Christoph Reiter (@lazka)
   </a>
   
 </li>
@@ -770,12 +873,9 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-                
-                
-                  
                 
                 
                 <header>
@@ -799,7 +899,7 @@ features a package management system called
 <a href="https://wiki.archlinux.org/index.php/pacman">Pacman</a>, which should be familiar
 to Arch Linux users. It brings many powerful features such as dependency
 resolution and simple complete system upgrades, as well as straight-forward and
-reproducible package building. Our package repository contains <a href="https://packages.msys2.org/base">more than 1800
+reproducible package building. Our package repository contains <a href="https://packages.msys2.org/base">more than 2000
 pre-built packages</a> ready to install.</p>
 <p>For more details see <a href="docs/what-is-msys2/">'What is MSYS2?'</a> which also
 compares MSYS2 to other software distributions and development environments like
@@ -811,49 +911,146 @@ MSYS2 and what for.</p>
 <h2 id="installation">Installation</h2>
 <ol>
 <li>
-<p>Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20200903.exe" class="button">msys2-x86_64-20200903.exe</a></p>
-<p><span style="opacity: 0.6;">SHA256 checksum: <code>1424eee8175ad63e0db08e1b7ac47f90a2ea43df0a1b53d9a433849fcc5f6762</code></span></p>
+<p>Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20210228.exe" class="button">msys2-x86_64-20210228.exe</a></p>
+<p><span style="opacity: 0.6;">Verify with SHA256 checksum <code>ef1dbd40d03eda274f6d101792e5d197f0709fd306967c42be025f8746fcd9af</code>
+or <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20210228.exe.sig">GPG signature</a>
+by <a href="http://keyserver.ubuntu.com/pks/lookup?search=0x0ebf782c5d53f7e5fb02a66746bd761f7a49b0ec&amp;fingerprint=on&amp;op=vindex">0xf7a49b0ec</a>.</span></p>
 </li>
 <li>
 <p>Run the installer. MSYS2 requires 64 bit Windows 7 or newer.</p>
 </li>
 <li>
-<p>Click <strong>"Next"</strong></p>
-<p><img alt="First screen of MSYS2 installation" src="images/1_msys32-start.png" /></p>
+<p>Enter your desired <strong>Installation Folder</strong> (short ASCII-only path on a NTFS volume, no accents, no spaces, no symlinks, no subst or network drives, no FAT).</p>
+<p><img alt="Second screen of MSYS2 installation" src="images/install-2-path.png" /></p>
 </li>
 <li>
-<p>Enter <strong>Installation Folder</strong> (ASCII, no accents, spaces nor symlinks, short path)</p>
-<p><img alt="Second screen of MSYS2 installation" src="images/2_msys32-install_path.png" /></p>
+<p>When done, tick <strong>Run MSYS2 now</strong>.</p>
+<p><img alt="Third screen of MSYS2 installation" src="images/install-3-finish.png" /></p>
 </li>
 <li>
-<p>Tick <strong>Run MSYS2 now</strong></p>
-<p><img alt="Third screen of MSYS2 installation" src="images/5_msys2-finish_install.png" /></p>
-</li>
-<li>
-<p>Update the package database and core system packages with:</p>
-<div class="highlight"><pre><span></span><code>pacman -Syu
-</code></pre></div>
+<p>Update the package database and base packages.  Unless your setup file is very recent, it will take two steps.  First run <code>pacman -Syu</code>:</p>
+<div class="highlight"><pre><span></span><code>$ pacman -Syu
+:: Synchronizing package databases...
+ mingw32                        805.0 KiB
+ mingw32.sig                    438.0   B
+ mingw64                        807.9 KiB
+ mingw64.sig                    438.0   B
+ msys                           289.3 KiB
+ msys.sig                       438.0   B
+:: Starting core system upgrade...
+warning: terminate other MSYS2 programs before proceeding
+resolving dependencies...
+looking for conflicting packages...
 
-<p><img alt="MSYS2 shell with pacman's output about system upgrade" src="images/6_msys2-update-system.png" /></p>
-</li>
-<li>
-<p>If needed, close MSYS2, run it again from Start menu. Update the rest with:</p>
-<div class="highlight"><pre><span></span><code>pacman -Su
-</code></pre></div>
+Packages (6) bash-5.1.004-1  filesystem-2021.01-1
+             mintty-1~3.4.4-1  msys2-runtime-3.1.7-4
+             pacman-5.2.2-9  pacman-mirrors-20201208-1
 
+Total Download Size:   11.05 MiB
+Total Installed Size:  53.92 MiB
+Net Upgrade Size:      -1.24 MiB
+
+:: Proceed with installation? [Y/n]
+:: Retrieving packages...
+ bash-5.1.004-1-x86_64            2.3 MiB
+ filesystem-2021.01-1-any        33.2 KiB
+ mintty-1~3.4.4-1-x86_64        767.2 KiB
+ msys2-runtime-3.1.7-4-x86_64     2.6 MiB
+ pacman-mirrors-20201208-1-any    3.8 KiB
+ pacman-5.2.2-9-x86_64            5.4 MiB
+(6/6) checking keys in keyring       100%
+(6/6) checking package integrity     100%
+(6/6) loading package files          100%
+(6/6) checking for file conflicts    100%
+(6/6) checking available disk space  100%
+:: Processing package changes...
+(1/6) upgrading bash                 100%
+(2/6) upgrading filesystem           100%
+(3/6) upgrading mintty               100%
+(4/6) upgrading msys2-runtime        100%
+(5/6) upgrading pacman-mirrors       100%
+(6/6) upgrading pacman               100%
+:: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
+</code></pre></div>
 </li>
 <li>
-<p>Now <strong>Pacman</strong> is fully committed to the Windows cause :)</p>
-<p><img alt="MSYS2 shell with pacman's output about package installation" src="images/7_msys2-install-freely.png" /></p>
+<p>Run "MSYS2 MSYS" from Start menu.  Update the rest of the base packages with <code>pacman -Su</code>:</p>
+<div class="highlight"><pre><span></span><code>$ pacman -Su
+:: Starting core system upgrade...
+ there is nothing to do
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (20) base-2020.12-1  bsdtar-3.5.0-1
+              [... more packages listed ...]
+
+Total Download Size:   12.82 MiB
+Total Installed Size:  44.25 MiB
+Net Upgrade Size:       3.01 MiB
+
+:: Proceed with installation? [Y/n]
+[... downloading and installation continues ...]
+</code></pre></div>
 </li>
 <li>
-<p>Take look at <a href="wiki/MSYS2-installation/">Detailed MSYS2 install guide</a> for
-   troubleshooting and additional details on how to keep your MSYS2 up-to-date.</p>
+<p>Now MSYS2 is ready for you.  You will probably want to install some tools and the mingw-w64 GCC to start compiling:</p>
+<div class="highlight"><pre><span></span><code>$ pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+warning: file-5.39-2 is up to date -- skipping
+[... more warnings ...]
+:: There are 48 members in group base-devel:
+:: Repository msys
+   1) asciidoc  2) autoconf  3) autoconf2.13  4) autogen
+   [... more packages listed ...]
+
+Enter a selection (default=all):
+:: There are 19 members in group mingw-w64-x86_64-toolchain:
+:: Repository mingw64
+   1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt-git
+   [... more packages listed ...]
+
+Enter a selection (default=all):
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (123) docbook-xml-4.5-2  docbook-xsl-1.79.2-1
+               [... more packages listed ...]
+               m4-1.4.18-2  make-4.3-1  man-db-2.9.3-1
+               mingw-w64-x86_64-binutils-2.35.1-3
+               mingw-w64-x86_64-crt-git-9.0.0.6090.ad98746a-1
+               mingw-w64-x86_64-gcc-10.2.0-6
+               mingw-w64-x86_64-gcc-ada-10.2.0-6
+               mingw-w64-x86_64-gcc-fortran-10.2.0-6
+               mingw-w64-x86_64-gcc-libgfortran-10.2.0-6
+               mingw-w64-x86_64-gcc-libs-10.2.0-6
+               mingw-w64-x86_64-gcc-objc-10.2.0-6
+               mingw-w64-x86_64-gdb-10.1-2
+               mingw-w64-x86_64-gdb-multiarch-10.1-2
+              [... more packages listed ...]
+
+Total Download Size:    196.15 MiB
+Total Installed Size:  1254.96 MiB
+
+:: Proceed with installation? [Y/n]
+[... downloading and installation continues ...]
+</code></pre></div>
+</li>
+<li>
+<p>To start building using the mingw-w64 GCC, close this window and run "MSYS MinGW 64-bit" from Start menu.  Now you can call <code>make</code> or <code>gcc</code> to build software for Windows.</p>
+</li>
+<li>
+<p>Check out <a href="wiki/MSYS2-introduction/">the introduction page</a> to learn which
+   Start menu item to use when and which packages to install.  Take look at
+   <a href="wiki/MSYS2-installation/">Detailed MSYS2 install guide</a> for troubleshooting
+   and additional details on how to keep your MSYS2 up-to-date.</p>
 </li>
 </ol>
+<h2 id="sponsors">Sponsors</h2>
+<p>Our main server is sponsored by <a href="https://appfleet.com">appfleet.com</a></p>
+<p><a href="https://appfleet.com"><img alt="appfleet.com" src="appfleet.svg" width="250px" /></a></p>
 <h2 id="authors-and-contributors">Authors and Contributors</h2>
 <ul>
-<li><a href="https://github.com/Alexpux">Alexpux (Алексей)</a></li>
+<li><a href="https://github.com/Alexpux">Alexpux (Alexey Pavlov)</a></li>
 <li><a href="https://github.com/martell">martell (Martell Malone)</a></li>
 <li><a href="https://github.com/mingwandroid">mingwandroid (Ray Donnelly)</a></li>
 <li><a href="https://github.com/elieux">Elieux (David Macek)</a></li>
@@ -869,30 +1066,33 @@ MSYS2 and what for.</p>
 <li>search for and file <a href="https://github.com/msys2/mingw-packages/issues">issues for mingw-w64 packages on GitHub</a></li>
 <li>search for very old <a href="https://sourceforge.net/p/msys2/tickets/">tickets on SourceForge</a></li>
 <li>read and post to our <a href="https://sourceforge.net/p/msys2/mailman/msys2-users/">mailing list</a></li>
-<li>talk on our <a href="irc://irc.oftc.net:6667/msys2">IRC channel</a></li>
 <li>talk in our <a href="https://gitter.im/msys2/msys2">Gitter room</a></li>
+<li>talk in our <a href="https://discord.gg/jPQdRdDcT9">Discord server</a></li>
+<li>talk in our <a href="irc://irc.oftc.net:6667/msys2">IRC channel</a></li>
+<li>follow our <a href="https://twitter.com/msys2org">Twitter account</a></li>
 <li>read older <a href="https://sourceforge.net/p/msys2/discussion/general/">discussion on SourceForge</a></li>
-<li>more links on our <a href="https://github.com/msys2/msys2">developer homepage on GitHub</a></li>
+<li>more links on our <a href="https://github.com/msys2/msys2">homepage on GitHub</a></li>
 </ul>
 <h2 id="donations">Donations</h2>
 <h4 id="alexey-pavlov-alexpux">Alexey Pavlov (<a href="https://github.com/alexpux">@alexpux</a>)</h4>
-<p>Webmoney transfer to the following webmoney wallets:</p>
 <ul>
-<li>E271473533800</li>
-<li>R691797957081</li>
-<li>Z110171850957</li>
+<li>WebMoney transfer to the following WebMoney wallets:<ul>
+<li><code>E271473533800</code></li>
+<li><code>R691797957081</code></li>
+<li><code>Z110171850957</code></li>
 </ul>
-<p>To Paypal account: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#101;&#120;&#112;&#117;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#97;&#108;&#101;&#120;&#112;&#117;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
-<p>To yandex.money: 41001429355429</p>
+</li>
+<li>PayPal: <a href="https://www.paypal.com/donate/?business=alexpux%40gmail.com">alexpux@gmail.com</a></li>
+<li>Yandex.Money: <code>41001429355429</code></li>
+</ul>
 <h4 id="ray-donnelly-mingwandroid">Ray Donnelly (<a href="https://github.com/mingwandroid">@mingwandroid</a>)</h4>
-<p>PayPal:</p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-                ">
-              <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online." border="0">
-              <img alt="" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" style="display: none !important;" width="1" hidden="" height="1" border="0">
-</form>
+<ul>
+<li>PayPal: <a href="https://www.paypal.com/donate/?business=ray.donnelly%40gmail.com&amp;item_name=Ray+Donnelly+MSYS2+development+donation&amp;currency_code=GBP">ray.donnelly@gmail.com</a></li>
+</ul>
+<h4 id="christoph-reiter-lazka">Christoph Reiter (<a href="https://github.com/lazka">@lazka</a>)</h4>
+<ul>
+<li>GitHub Sponsors: <a href="https://github.com/sponsors/lazka">https://github.com/sponsors/lazka</a></li>
+</ul>
                 
               
               
@@ -912,7 +1112,7 @@ MSYS2 and what for.</p>
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
         
-          <a href="news/" title="News" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="news/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -976,15 +1176,15 @@ MSYS2 and what for.</p>
       
     </div>
     
-      <script src="assets/javascripts/vendor.d1f5a259.min.js"></script>
-      <script src="assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: ".",
-          features: ["instant"],
+          features: ['instant'],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.fae956e7.min.js"
+            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
