@@ -315,6 +315,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../who-is-using-msys2/" class="md-nav__link">
+        Who Is Using MSYS2?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environments/" class="md-nav__link">
+        Environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -372,18 +396,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../who-is-using-msys2/" class="md-nav__link">
-        Who Is Using MSYS2?
-      </a>
     </li>
   
 
@@ -624,7 +636,7 @@
   
     <li class="md-nav__item">
       <a href="../../wiki/Launchers/" class="md-nav__link">
-        Lauchers
+        Launchers
       </a>
     </li>
   
@@ -733,6 +745,18 @@
     <li class="md-nav__item">
       <a href="../../wiki/Terminals/" class="md-nav__link">
         Terminals
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/JIT-Debugging/" class="md-nav__link">
+        Just-in-time Debugging
       </a>
     </li>
   
@@ -857,7 +881,7 @@ MSYS2 yourself.</p>
 <p>1) Download and install MSYS2. For CI systems we provide a self extracting 
    archive, so you don't need any additional tools.</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Download the archive</span>
-<span class="p">(</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadFile</span><span class="p">(</span><span class="s1">&#39;https://github.com/msys2/msys2-installer/releases/download/2020-06-29/msys2-base-x86_64-20200629.sfx.exe&#39;</span><span class="p">,</span> <span class="s1">&#39;msys2.exe&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadFile</span><span class="p">(</span><span class="s1">&#39;https://github.com/msys2/msys2-installer/releases/download/nightly-x86_64/msys2-base-x86_64-latest.sfx.exe&#39;</span><span class="p">,</span> <span class="s1">&#39;msys2.exe&#39;</span><span class="p">)</span>
 <span class="p">.\</span><span class="n">msys2</span><span class="p">.</span><span class="n">exe</span> <span class="n">-y</span> <span class="n">-oC</span><span class="err">:</span><span class="p">\</span>  <span class="c"># Extract to C:\msys64</span>
 <span class="nb">Remove-Item</span> <span class="n">msys2</span><span class="p">.</span><span class="n">exe</span>  <span class="c"># Delete the archive again</span>
 </code></pre></div>
@@ -872,6 +896,12 @@ MSYS2 yourself.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$env:CHERE_INVOKING</span> <span class="p">=</span> <span class="s1">&#39;yes&#39;</span>  <span class="c"># Preserve the current working directory</span>
 <span class="nv">$env:MSYSTEM</span> <span class="p">=</span> <span class="s1">&#39;MINGW64&#39;</span>  <span class="c"># Start a 64 bit Mingw environment</span>
 <span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">msys64</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">bash</span> <span class="n">-lc</span> <span class="s1">&#39;./ci-build.sh&#39;</span>
+</code></pre></div>
+<p>4) End all processes that might have been started by the MSYS2 update/setup</p>
+<p>In some cases CI systems will wait until all processes you have started have
+also ended, but the MSYS2 setup and update might spawn processes for gnupg etc.
+that will stay around in the background forever. To end them all you can run:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">FI</span> <span class="s2">&quot;MODULES eq msys-2.0.dll&quot;</span>
 </code></pre></div>
                 
                   
@@ -893,7 +923,7 @@ MSYS2 yourself.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../what-is-msys2/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../environments/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -902,19 +932,19 @@ MSYS2 yourself.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                What is MSYS2?
+                Environments
               </div>
             </div>
           </a>
         
         
-          <a href="../who-is-using-msys2/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../terminals/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Who Is Using MSYS2?
+                Terminals
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

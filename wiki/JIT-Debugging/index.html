@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://www.msys2.org/wiki/Setting-up-SSHd/">
+        <link rel="canonical" href="https://www.msys2.org/wiki/JIT-Debugging/">
       
       <link rel="shortcut icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
-        <title>Setting up SSHd - MSYS2</title>
+        <title>Just-in-time Debugging - MSYS2</title>
       
     
     
@@ -55,10 +55,10 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MSYS2 - Setting up SSHd" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="MSYS2 - Just-in-time Debugging" />
+<meta property="og:description" content="Just-in-time debugging with MSYS2" />
 
-<meta property="og:url" content="https://www.msys2.org/wiki/Setting-up-SSHd/" />
+<meta property="og:url" content="https://www.msys2.org/wiki/JIT-Debugging/" />
 <meta property="og:image" content="https://www.msys2.org/logo.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="250" />
@@ -99,6 +99,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#msys2-processes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -126,7 +131,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Setting up SSHd
+              Just-in-time Debugging
             
           </span>
         </div>
@@ -648,18 +653,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Setting-up-SSHd/" class="md-nav__link">
         Setting up SSHd
       </a>
-      
     </li>
   
 
@@ -703,11 +701,65 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../JIT-Debugging/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Just-in-time Debugging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Just-in-time Debugging
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#msys2-processes" class="md-nav__link">
+    MSYS2 processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-windows-processes" class="md-nav__link">
+    Native Windows processes
+  </a>
+  
+    <nav class="md-nav" aria-label="Native Windows processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#native-windows-processes-started-from-msys2" class="md-nav__link">
+    Native Windows processes started from MSYS2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -725,123 +777,96 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#msys2-processes" class="md-nav__link">
+    MSYS2 processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-windows-processes" class="md-nav__link">
+    Native Windows processes
+  </a>
+  
+    <nav class="md-nav" aria-label="Native Windows processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#native-windows-processes-started-from-msys2" class="md-nav__link">
+    Native Windows processes started from MSYS2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/Setting-up-SSHd.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/msys2/msys2.github.io/edit/source/web/wiki/JIT-Debugging.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Setting up SSHd</h1>
+                  <h1>Just-in-time Debugging</h1>
                 
-                <p>One can apparently connect the OpenSSHd build included with Windows to MSYS2.
-Diablo-D3 has written down the steps here: <a href="https://github.com/Diablo-D3/dotfiles#opensshd-on-windows">https://github.com/Diablo-D3/dotfiles#opensshd-on-windows</a></p>
-<p>MSYS2 can also use its own OpenSSHd.  Use the set-up script below.</p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
-<span class="c1">#</span>
-<span class="c1">#  msys2-sshd-setup.sh — configure sshd on MSYS2 and run it as a Windows service</span>
-<span class="c1">#</span>
-<span class="c1">#  Replaces ssh-host-config &lt;https://github.com/openssh/openssh-portable/blob/master/contrib/cygwin/ssh-host-config&gt;</span>
-<span class="c1">#  Adapted from &lt;https://ghc.haskell.org/trac/ghc/wiki/Building/Windows/SSHD&gt; by Sam Hocevar &lt;sam@hocevar.net&gt;</span>
-<span class="c1">#  Adapted from &lt;https://gist.github.com/samhocevar/00eec26d9e9988d080ac&gt; by David Macek</span>
-<span class="c1">#</span>
-<span class="c1">#  Prerequisites:</span>
-<span class="c1">#    — a 64-bit installation of MSYS2 itself: https://msys2.org</span>
-<span class="c1">#    — some packages: pacman -S openssh cygrunsrv mingw-w64-x86_64-editrights</span>
-<span class="c1">#</span>
-<span class="c1">#  Gotchas:</span>
-<span class="c1">#    — the log file will be /var/log/msys2_sshd.log</span>
-<span class="c1">#    — if you get error “sshd: fatal: seteuid XXX : No such device or address”</span>
-<span class="c1">#      in the logs, try “passwd -R” (with admin privileges)</span>
-<span class="c1">#    — if you get error “chown(/dev/pty1, XXX, YYY) failed: Invalid argument”</span>
-<span class="c1">#      in the logs, make sure your account and group names are detectable (see</span>
-<span class="c1">#      `id`); issues are often caused by having /etc/{passwd,group} or having</span>
-<span class="c1">#      a modified /etc/nsswitch.conf</span>
-<span class="c1">#</span>
-<span class="c1">#  Changelog:</span>
-<span class="c1">#   09 May 2020 — completely remove additional privileged user</span>
-<span class="c1">#   16 Apr 2020 — remove additional privileged user</span>
-<span class="c1">#               — only touch /etc/{passwd,group} if they exist</span>
-<span class="c1">#   27 Jun 2019 — rename service to msys2_sshd to avoid conflicts with Windows OpenSSH</span>
-<span class="c1">#               — use mkgroup.exe as suggested in the comments</span>
-<span class="c1">#               — fix a problem with CRLF and grep</span>
-<span class="c1">#   24 Aug 2015 — run server with -e to redirect logs to /var/log/sshd.log</span>
-<span class="c1">#</span>
+                <h2 id="msys2-processes">MSYS2 processes</h2>
+<p>To get just-in-time debugging of MSYS2 processes, use the <code>error_start</code> <code>MSYS</code> environment variable setting:
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">MSYS</span><span class="o">=</span><span class="s2">&quot;error_start:</span><span class="k">$(</span>cygpath -w /usr/bin/gdb<span class="k">)</span><span class="s2">&quot;</span>
+./crashy.exe
+</code></pre></div></p>
+<h2 id="native-windows-processes">Native Windows processes</h2>
+<p>MINGW gdb can be used as a <a href="https://docs.microsoft.com/en-us/windows/win32/debug/configuring-automatic-debugging#configuring-automatic-debugging-for-application-crashes">Windows JIT debugger</a>.
+This is documented <a href="https://www.sourceware.org/gdb/current/onlinedocs/gdb/Cygwin-Native.html">here</a> under <code>signal-event</code>.</p>
+<p>As Administrator:
+<div class="highlight"><pre><span></span><code>regtool add -w <span class="s1">&#39;/HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/AeDebug&#39;</span>
+regtool <span class="nb">set</span> -w <span class="s1">&#39;/HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/AeDebug/Debugger&#39;</span> <span class="se">\&quot;</span><span class="k">$(</span>cygpath -w /mingw64/bin/gdb.exe<span class="k">)</span><span class="s1">&#39;&quot; -ex &quot;attach %ld&quot; -ex &quot;signal-event %ld&quot; -ex &quot;continue&quot;&#39;</span>
+regtool <span class="nb">set</span> -w <span class="s1">&#39;/HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/AeDebug/Auto&#39;</span> <span class="m">1</span>
 
-<span class="nb">set</span> -e
-
-<span class="c1">#</span>
-<span class="c1"># Configuration</span>
-<span class="c1">#</span>
-
-<span class="nv">UNPRIV_USER</span><span class="o">=</span>sshd <span class="c1"># DO NOT CHANGE; this username is hardcoded in the openssh code</span>
-<span class="nv">UNPRIV_NAME</span><span class="o">=</span><span class="s2">&quot;Privilege separation user for sshd&quot;</span>
-
-<span class="nv">EMPTY_DIR</span><span class="o">=</span>/var/empty
-
-
-<span class="c1">#</span>
-<span class="c1"># Check installation sanity</span>
-<span class="c1">#</span>
-
-<span class="k">if</span> ! /mingw64/bin/editrights -h &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;editrights&#39;. Try: pacman -S mingw-w64-x86_64-editrights.&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="k">if</span> ! cygrunsrv -v &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;cygrunsrv&#39;. Try: pacman -S cygrunsrv.&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="k">if</span> ! ssh-keygen -A<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing &#39;ssh-keygen&#39;. Try: pacman -S openssh.&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-
-<span class="c1">#</span>
-<span class="c1"># The unprivileged sshd user (for privilege separation)</span>
-<span class="c1">#</span>
-
-<span class="nv">add</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> &gt;/dev/null<span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">&quot;//add&quot;</span><span class="p">;</span> <span class="k">fi)</span><span class="s2">&quot;</span>
-<span class="k">if</span> ! net user <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="si">${</span><span class="nv">add</span><span class="si">}</span> //fullname:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_NAME</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-              //homedir:<span class="s2">&quot;</span><span class="k">$(</span>cygpath -w <span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="k">)</span><span class="s2">&quot;</span> //active:no<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to create Windows user </span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-
-<span class="c1">#</span>
-<span class="c1"># Add or update /etc/passwd entries</span>
-<span class="c1">#</span>
-
-<span class="k">if</span> <span class="nb">test</span> -f /etc/passwd<span class="p">;</span> <span class="k">then</span>
-    sed -i -e <span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/d&#39;</span> /etc/passwd
-    <span class="nv">SED</span><span class="o">=</span><span class="s1">&#39;/^&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/s?^\(\([^:]*:\)\{5\}\).*?\1&#39;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">EMPTY_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="s1">&#39;:/bin/false?p&#39;</span>
-    mkpasswd -l -u <span class="s2">&quot;</span><span class="si">${</span><span class="nv">UNPRIV_USER</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^[^:]*+//&#39;</span> <span class="p">|</span> sed -ne <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SED</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
-             &gt;&gt; /etc/passwd
-    mkgroup.exe -l &gt; /etc/group
-<span class="k">fi</span>
-
-
-<span class="c1">#</span>
-<span class="c1"># Finally, register service with cygrunsrv and start it</span>
-<span class="c1">#</span>
-
-cygrunsrv -R msys2_sshd <span class="o">||</span> <span class="nb">true</span>
-cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /usr/bin/sshd.exe -a <span class="s2">&quot;-D -e&quot;</span> -y tcpip
-
-<span class="c1"># The SSH service should start automatically when Windows is rebooted. You can</span>
-<span class="c1"># manually restart the service by running `net stop msys2_sshd` + `net start msys2_sshd`</span>
-<span class="k">if</span> ! net start msys2_sshd<span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&quot;ERROR: Unable to start msys2_sshd service&quot;</span>
-    <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
+regtool add -W <span class="s1">&#39;/HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/AeDebug&#39;</span>
+regtool <span class="nb">set</span> -W <span class="s1">&#39;/HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/AeDebug/Debugger&#39;</span> <span class="se">\&quot;</span><span class="k">$(</span>cygpath -w /mingw32/bin/gdb.exe<span class="k">)</span><span class="s1">&#39;&quot; -ex &quot;attach %ld&quot; -ex &quot;signal-event %ld&quot; -ex &quot;continue&quot;&#39;</span>
+regtool <span class="nb">set</span> -W <span class="s1">&#39;/HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/AeDebug/Auto&#39;</span> <span class="m">1</span>
+</code></pre></div></p>
+<h3 id="native-windows-processes-started-from-msys2">Native Windows processes started from MSYS2</h3>
+<p>When a native process which was started (possibly indirectly) from an MSYS2 process (such as <code>bash</code>) crashes, it does not invoke
+the registered debugger (or Windows Error Reporting), unless the <code>SetErrorMode</code> <code>SEM_NOGPFAULTERRORBOX</code> flag was cleared in the meantime
+(<code>SetErrorMode</code> flags are inherited from a parent process by default).  As of <a href="https://packages.msys2.org/package/msys2-runtime?repo=msys">msys2-runtime</a> <code>3.2.0-2</code>, it is possible to tell MSYS2 to
+create processes without inheriting its error mode flags by setting an <code>MSYS</code> environment variable setting:
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">MSYS</span><span class="o">=</span>winjitdebug
+<span class="nb">exec</span> bash
+./crashy.exe
 </code></pre></div>
+(note that the option needs to be set in the parent process, so <code>bash</code> needs to be restarted, assuming you are starting processes from <code>bash</code>).</p>
+                
+                  
                 
               
               
@@ -860,7 +885,7 @@ cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /us
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Porting/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Terminals/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -869,25 +894,11 @@ cygrunsrv -I msys2_sshd -d <span class="s2">&quot;MSYS2 sshd&quot;</span> -p /us
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Porting
+                Terminals
               </div>
             </div>
           </a>
         
-        
-          <a href="../Signing-packages/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Signing Packages
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>

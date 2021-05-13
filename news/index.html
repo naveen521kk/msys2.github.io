@@ -282,6 +282,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2021-04-21-rip-mingwandroid" class="md-nav__link">
+    2021-04-21 - R.I.P. mingwandroid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-03-25-temporarily-broken-msys2-launcher-package" class="md-nav__link">
+    2021-03-25 - Temporarily broken msys2-launcher package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2021-02-27-new-server-for-repomsys2org-and-packagesmsys2org" class="md-nav__link">
     2021-02-27 - New server for repo.msys2.org and packages.msys2.org
   </a>
@@ -444,8 +458,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/ci/" class="md-nav__link">
-        Using MSYS2 in CI
+      <a href="../docs/who-is-using-msys2/" class="md-nav__link">
+        Who Is Using MSYS2?
       </a>
     </li>
   
@@ -456,8 +470,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/who-is-using-msys2/" class="md-nav__link">
-        Who Is Using MSYS2?
+      <a href="../docs/environments/" class="md-nav__link">
+        Environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/ci/" class="md-nav__link">
+        Using MSYS2 in CI
       </a>
     </li>
   
@@ -699,7 +725,7 @@
   
     <li class="md-nav__item">
       <a href="../wiki/Launchers/" class="md-nav__link">
-        Lauchers
+        Launchers
       </a>
     </li>
   
@@ -813,6 +839,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wiki/JIT-Debugging/" class="md-nav__link">
+        Just-in-time Debugging
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -842,6 +880,20 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2021-04-21-rip-mingwandroid" class="md-nav__link">
+    2021-04-21 - R.I.P. mingwandroid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2021-03-25-temporarily-broken-msys2-launcher-package" class="md-nav__link">
+    2021-03-25 - Temporarily broken msys2-launcher package
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#2021-02-27-new-server-for-repomsys2org-and-packagesmsys2org" class="md-nav__link">
@@ -959,6 +1011,24 @@
                 
                 
                 <h1 id="news">News</h1>
+<h3 id="2021-04-21-rip-mingwandroid">2021-04-21 - R.I.P. <a href="https://github.com/mingwandroid">mingwandroid</a></h3>
+<p>Ray Donnelly is a co-founder and developer of MSYS2 and after a multi year fight
+with cancer passed away on 2021-04-20.</p>
+<p><img alt="ray" height="393" src="../ray.jpg" style="max-width: 300px; width:100%; border: 2px solid #333; box-shadow: 0px 0px 3px #ccc;" width="589" /></p>
+<p>If you want to know more about his life and work see his fundraiser
+descriptions:</p>
+<ul>
+<li><a href="https://uk.gofundme.com/f/help-Ray-fund-a-hospice-bedroom">https://uk.gofundme.com/f/help-Ray-fund-a-hospice-bedroom</a></li>
+<li><a href="https://uk.gofundme.com/f/arku72-help-ray-fight-cancer">https://uk.gofundme.com/f/arku72-help-ray-fight-cancer</a></li>
+</ul>
+<p>He was always helpful, knowledgeable, and friendly, and he will be greatly missed.</p>
+<h3 id="2021-03-25-temporarily-broken-msys2-launcher-package">2021-03-25 - Temporarily broken msys2-launcher package</h3>
+<p>The repo contained a broken msys2-launcher package for a few hours today causing things like
+"msys2.exe" to just show an error dialog. You can get back to a working setup this way:</p>
+<ul>
+<li>Start <code>C:/msys64/msys2_shell.cmd</code> to get a shell</li>
+<li>Run <code>pacman -Suy</code> to get all the fixed packages</li>
+</ul>
 <h3 id="2021-02-27-new-server-for-repomsys2org-and-packagesmsys2org">2021-02-27 - New server for repo.msys2.org and packages.msys2.org</h3>
 <p>We have moved repo.msys2.org (and package.msys2.org) to a new server.  There was
 a short downtime, but everything should be running great now.  Big thanks to
@@ -993,10 +1063,10 @@ Drake</a> for backporting, upstreaming and fixing
 bugs exposed by these changes.</p>
 <p><strong>Known issues:</strong></p>
 <ul>
-<li>In case you are seeing errors such as <code>relocation truncated to fit:
+<li>(Fixed now) <del>In case you are seeing errors such as <code>relocation truncated to fit:
   IMAGE_REL_AMD64_REL32 against undefined symbol</code> try building with
   <code>-Wl,--default-image-base-low</code>. Here is the upstream bug report:
-  <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=26659">https://sourceware.org/bugzilla/show_bug.cgi?id=26659</a></li>
+  <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=26659">https://sourceware.org/bugzilla/show_bug.cgi?id=26659</a></del></li>
 </ul>
 <h3 id="2020-12-26-zstd-exemption-for-core-packages-removed">2020-12-26 - Zstd exemption for core packages removed</h3>
 <p>Given it's been months since we began the switch to Zstd for compressing
